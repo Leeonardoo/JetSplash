@@ -11,11 +11,15 @@ import io.leeonardoo.jetsplash.R
 
 sealed class NetworkError<out E>(open val code: Int) {
 
-    // A common text icon representing each state
+    /**
+     * A common description representing each state
+     */
     val description: String
         get() = ""
 
-    // A common error icon representing each state
+    /**
+     * A common error icon representing each state
+     */
     val imageVector: ImageVector
         get() {
             return when (this) {
@@ -42,7 +46,9 @@ sealed class NetworkError<out E>(open val code: Int) {
             }
         }
 
-    // A common error drawable representing each state
+    /**
+     * A common error drawable representing each state
+     */
     @get:DrawableRes
     val iconRes: Int
         get() {
