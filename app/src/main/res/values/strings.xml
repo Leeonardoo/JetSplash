@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">JetSplash</string>
+
+    <string name="request_not_found">We couldn\'t find the page you are looking for. Try again.</string>
+    <string name="request_unknown_error">Something went wrong. Check the information and try again.</string>
+    <string name="request_network_error">It looks like you\'re offline. Check your connection and try again.</string>
+    <string name="request_serialization_error">We got some invalid data from the server. Check if the app is updated and try again or contact support.</string>
+    <string name="request_server_error">An internal server error occurred. Try again or contact support.</string>
+    <string name="request_network_untrusted">The connection to the server cannot be trusted and for security reasons we won\'t continue. Check if the time is correct and try again or contact IT or support.</string>
 </resources>
