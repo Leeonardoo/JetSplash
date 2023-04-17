@@ -33,7 +33,7 @@ open class BaseRequestHandler(private val appContext: Context) {
      * @param unknownErrorMsg the StringRes of a unknown/unexpected error
      * @param networkErrorMsg the StringRes of a network error
      */
-    open suspend fun <T, E: ErrorMapper> handleAsResult(
+    open suspend fun <T, E : ErrorMapper> handleAsResult(
         errorClass: Class<E>,
         @StringRes notFoundErrorMsg: Int = R.string.request_not_found,
         @StringRes unknownErrorMsg: Int = R.string.request_unknown_error,

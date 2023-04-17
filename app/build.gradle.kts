@@ -99,7 +99,7 @@ android {
 
 dependencies {
     val kotlinVersion: String by rootProject.extra
-    val koinAndroidComposeVersion= "3.4.3"
+    val koinAndroidComposeVersion = "3.4.3"
     val koinAndroidVersion = "3.4.0"
     val koinVersion = "3.4.0"
     val navVersion = "2.6.0-alpha08"
