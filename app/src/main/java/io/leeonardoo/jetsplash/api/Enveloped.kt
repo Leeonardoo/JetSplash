@@ -1,7 +1,5 @@
 package io.leeonardoo.jetsplash.api
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.CloudOff
 import com.squareup.moshi.*
 import java.lang.reflect.Type
 
@@ -27,7 +25,8 @@ class EnvelopeFactory : JsonAdapter.Factory {
     override fun create(
         type: Type,
         annotations: MutableSet<out Annotation>,
-        moshi: Moshi): JsonAdapter<*>? {
+        moshi: Moshi
+    ): JsonAdapter<*>? {
         val delegateAnnotations =
             Types.nextAnnotations(annotations, Enveloped::class.java) ?: return null
 

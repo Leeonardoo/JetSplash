@@ -10,10 +10,10 @@ package io.leeonardoo.jetsplash.api
  * @param T The type of the successful result
  * @param E The type of the error result
  */
-sealed class NetworkResult<out T, out E: ErrorMapper> {
+sealed class NetworkResult<out T, out E : ErrorMapper> {
 
     data class Success<out T>(val result: T) : NetworkResult<T, Nothing>()
 
-    data class Error<out E: ErrorMapper>(val error: NetworkError<E>) : NetworkResult<Nothing, E>()
+    data class Error<out E : ErrorMapper>(val error: NetworkError<E>) : NetworkResult<Nothing, E>()
 
 }
