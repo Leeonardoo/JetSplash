@@ -112,8 +112,8 @@ sealed class NetworkError<out E : ErrorMapper>(open val code: Int) {
 
     //Server-side
     data class ErrorBody<out E : ErrorMapper>(
-        val error: E,
-        override val code: Int
+        override val code: Int,
+        val error: E
     ) : NetworkError<E>(code = code)
 
     //Server-side
@@ -128,7 +128,9 @@ sealed class NetworkError<out E : ErrorMapper>(open val code: Int) {
     ) : NetworkError<Nothing>(code = -1)
 
     //Server-side
-    object NotFound : NetworkError<Nothing>(code = 404)
+    data class NotFound(
+        val exception: Exception?
+    ) : NetworkError<Nothing>(code = 404)
 
     //Client-side
     data class ResponseSerialization(
