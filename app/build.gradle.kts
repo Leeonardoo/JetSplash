@@ -99,22 +99,22 @@ android {
 
 dependencies {
     val kotlinVersion: String by rootProject.extra
-    val koinAndroidComposeVersion = "3.4.3"
+    val koinAndroidComposeVersion= "3.4.3"
     val koinAndroidVersion = "3.4.0"
     val koinVersion = "3.4.0"
-    val navVersion = "2.6.0-alpha08"
+    val navVersion = "2.6.0-alpha09"
 
     androidTestImplementation("androidx.test.ext:junit-ktx:1.1.5")
     testImplementation("junit:junit:4.13.2")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 
-    val composeVersion = "1.5.0-alpha01"
+    val composeVersion = "1.5.0-alpha02"
     val lifecycleVersion = "2.6.1"
     val roomVersion = "2.5.1"
-    val accompanistVersion = "0.30.0"
+    val accompanistVersion = "0.31.0-alpha"
     val coilVersion = "2.3.0"
 
-    implementation("androidx.emoji2:emoji2:1.4.0-alpha01")
+    implementation("androidx.emoji2:emoji2:1.4.0-beta02")
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
@@ -123,7 +123,7 @@ dependencies {
     //Ktx Extensions and Arch
     implementation("androidx.core:core-ktx:1.11.0-alpha01")
     implementation("androidx.collection:collection-ktx:1.2.0")
-    implementation("androidx.activity:activity-ktx:1.7.0")
+    implementation("androidx.activity:activity-ktx:1.7.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
@@ -163,8 +163,8 @@ dependencies {
     androidTestImplementation("androidx.navigation:navigation-testing:$navVersion")
     implementation("androidx.navigation:navigation-runtime-ktx:$navVersion")
     implementation("androidx.navigation:navigation-compose:$navVersion")
-    implementation("io.github.raamcosta.compose-destinations:animations-core:1.8.33-beta")
-    ksp("io.github.raamcosta.compose-destinations:ksp:1.8.33-beta")
+    implementation("io.github.raamcosta.compose-destinations:animations-core:1.9.42-beta")
+    ksp("io.github.raamcosta.compose-destinations:ksp:1.9.42-beta")
 
     //Material Design
     implementation("com.google.android.material:material:1.8.0")
@@ -179,7 +179,7 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
     implementation("androidx.activity:activity-compose:1.7.0")
     implementation("androidx.compose.ui:ui-viewbinding:$composeVersion")
-    implementation("androidx.compose.material3:material3:1.1.0-beta01")
+    implementation("androidx.compose.material3:material3:1.1.0-rc01")
     implementation("androidx.compose.material:material:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling-preview:$composeVersion")
     implementation("io.github.fornewid:material-motion-compose-core:0.10.4")
